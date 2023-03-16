@@ -77,10 +77,10 @@ class LoginViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "openWelcomeVC" {
-            guard let secondVC = segue.destination as? WelcomeViewController else {
+            guard let welcomeVC = segue.destination as? WelcomeViewController else {
                 return
             }
-            secondVC.username = loginTextField.text
+            welcomeVC.username = loginTextField.text
         }
     }
 
