@@ -39,6 +39,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A84147829C486F200603171 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				3A8E1A4929C32E3E00585C41 /* AppDelegate.swift */,
+				3A8E1A4B29C32E3E00585C41 /* SceneDelegate.swift */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		3A84147929C4872100603171 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3A8E1A4D29C32E3E00585C41 /* LoginViewController.swift */,
+				3A49C76C29C34C80001CDD8B /* WelcomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3A84147A29C4873500603171 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				3A8E1A4F29C32E3E00585C41 /* Main.storyboard */,
+				3A8E1A5429C32E4000585C41 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		3A84147B29C4881200603171 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3A8E1A5229C32E4000585C41 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		3A8E1A3D29C32E3E00585C41 = {
 			isa = PBXGroup;
 			children = (
@@ -58,13 +93,10 @@
 		3A8E1A4829C32E3E00585C41 /* loginApp */ = {
 			isa = PBXGroup;
 			children = (
-				3A8E1A4929C32E3E00585C41 /* AppDelegate.swift */,
-				3A8E1A4B29C32E3E00585C41 /* SceneDelegate.swift */,
-				3A8E1A4D29C32E3E00585C41 /* LoginViewController.swift */,
-				3A49C76C29C34C80001CDD8B /* WelcomeViewController.swift */,
-				3A8E1A4F29C32E3E00585C41 /* Main.storyboard */,
-				3A8E1A5229C32E4000585C41 /* Assets.xcassets */,
-				3A8E1A5429C32E4000585C41 /* LaunchScreen.storyboard */,
+				3A84147929C4872100603171 /* ViewControllers */,
+				3A84147A29C4873500603171 /* StoryBoards */,
+				3A84147B29C4881200603171 /* Resources */,
+				3A84147829C486F200603171 /* SupportFiles */,
 				3A8E1A5729C32E4000585C41 /* Info.plist */,
 			);
 			path = loginApp;
