@@ -12,48 +12,37 @@ class LoginViewController: UIViewController {
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var loginTextField: UITextField!
     
-    let login = "Admin"
-    let password = "12345"
+    let login = User.getUserData()
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "openWelcomeVC" {
+            guard let welcomeVC = segue.destination as? WelcomeViewController else {
+                return
+            }
+            welcomeVC.user = login
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         passwordTextField.isSecureTextEntry = true
     }
     
-    @IBAction func loginButtonTapped(_ sender: UIButton) {
-        guard let login = loginTextField.text, !login.isEmpty else {
+    @IBAction func loginButtonTapped() {
+        guard loginTextField.text == login.login, passwordTextField.text == login.password else {
             showInfoAlert(
                 title: "Ошибка",
-                message: "Пожалуйста, введите логин.")
+                message: "Пожалуйста, введите логин или пароль."
+            )
             return
         }
-        guard let password = passwordTextField.text, !password.isEmpty else {
-            showInfoAlert(
-                title: "Ошибка",
-                message: "Пожалуйста, введите пароль.")
-            return
-        }
-        if login == self.login && password == self.password {
-            performSegue(
-                withIdentifier: "openWelcomeVC",
-                sender: self)
-        } else {
-            showInfoAlert(
-                title: "Ошибка",
-                message: "Неверный логин или пароль")
-        }
+        performSegue(withIdentifier: "openWelcomeVC", sender: nil)
     }
     
-    @IBAction func forgotLoginTapped(_ sender: Any) {
-        showInfoAlert(
-            title: "Ваш логин",
-            message: "Admin")
-    }
-    
-    @IBAction func forgotPasswordTapped(_ sender: Any) {
-        showInfoAlert(
-            title: "Ваш пароль",
-            message: "12345")
+    @IBAction func forgotLoginTapped(_ sender: UIButton) {
+        sender.tag == 0
+            ? showInfoAlert(title: "Ваш логин", message: "\(login.login)")
+            : showInfoAlert(title: "Ваш пароль", message: "\(login.password)")
     }
     
     func showInfoAlert(title: String, message: String) {
@@ -67,15 +56,6 @@ class LoginViewController: UIViewController {
         present(alertController, animated: true)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "openWelcomeVC" {
-            guard let welcomeVC = segue.destination as? WelcomeViewController else {
-                return
-            }
-            welcomeVC.username = loginTextField.text
-        }
-    }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
@@ -87,5 +67,3 @@ class LoginViewController: UIViewController {
     }
     
 }
-
-
