@@ -40,11 +40,13 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotLoginTapped(_ sender: UIButton) {
-        sender.tag == 0
-            ? showInfoAlert(title: "Ваш логин", message: "\(login.login)")
-            : showInfoAlert(title: "Ваш пароль", message: "\(login.password)")
+        showInfoAlert(title: "Напомню тебе!", message: "Ваш логин \(login.login)")
     }
     
+    @IBAction func forgotPasswordTapped(_ sender: UIButton) {
+        showInfoAlert(title: "Напомню тебе!", message: "Ваш пароль \(login.password)")
+    }
+        
     func showInfoAlert(title: String, message: String) {
         let alertController = UIAlertController(
             title: title,

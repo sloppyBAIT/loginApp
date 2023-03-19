@@ -67,7 +67,7 @@
                                             <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="forgotLoginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sGz-Wa-YdG"/>
+                                            <action selector="forgotPasswordTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sAX-OD-aHb"/>
                                         </connections>
                                     </button>
                                 </subviews>
