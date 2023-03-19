@@ -203,7 +203,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wyW-96-Mox">
-                                <rect key="frame" x="16" y="220" width="99.5" height="164.5"/>
+                                <rect key="frame" x="16" y="220" width="99.5" height="165.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Фамилия:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2It-za-JzH">
                                         <rect key="frame" x="0.0" y="0.0" width="83" height="21.5"/>
@@ -246,7 +246,7 @@
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTz-ie-tLa">
-                                        <rect key="frame" x="0.0" y="147.5" width="55.5" height="17"/>
+                                        <rect key="frame" x="0.0" y="147.5" width="63" height="18"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Обо мне:">
                                                 <attributes>
@@ -277,7 +277,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" id="yIe-7Z-KRn">
-                        <imageReference key="image" image="plus.rectangle.on.folder.fill" catalog="system" symbolScale="large" renderingMode="hierarchical">
+                        <imageReference key="image" image="chart.bar.doc.horizontal" catalog="system" symbolScale="large" renderingMode="hierarchical">
                             <hierarchicalColors>
                                 <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color systemColor="secondaryLabelColor"/>
@@ -307,24 +307,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="АУТН" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBM-Uy-TBi">
-                                <rect key="frame" x="112" y="20" width="151" height="22"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <rect key="frame" x="112" y="20" width="151" height="42"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" systemColor="labelColor"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="projectBio" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBl-y5-ADh">
+                                <rect key="frame" x="16" y="343" width="343" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="labelColor"/>
+                                <size key="shadowOffset" width="1" height="0.0"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="autn" translatesAutoresizingMaskIntoConstraints="NO" id="KvD-gg-OSp">
+                                <rect key="frame" x="16" y="70" width="343" height="249"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="249" id="DbA-fT-5tT"/>
+                                </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vpA-1a-hpe"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
-                            <constraint firstItem="kBM-Uy-TBi" firstAttribute="leading" secondItem="vpA-1a-hpe" secondAttribute="leading" constant="112" id="NiV-rB-rPm"/>
-                            <constraint firstItem="kBM-Uy-TBi" firstAttribute="centerX" secondItem="MTw-2H-TjE" secondAttribute="centerX" id="Wz0-y1-8YO"/>
-                            <constraint firstItem="kBM-Uy-TBi" firstAttribute="top" secondItem="MTw-2H-TjE" secondAttribute="top" constant="20" symbolic="YES" id="lgl-B1-TPW"/>
+                            <constraint firstItem="KvD-gg-OSp" firstAttribute="width" secondItem="kBM-Uy-TBi" secondAttribute="width" multiplier="2.27152" id="26W-Yz-8EO"/>
+                            <constraint firstItem="tBl-y5-ADh" firstAttribute="centerX" secondItem="kBM-Uy-TBi" secondAttribute="centerX" id="6cC-7P-egz"/>
+                            <constraint firstItem="tBl-y5-ADh" firstAttribute="leading" secondItem="vpA-1a-hpe" secondAttribute="leading" constant="16" id="B2Q-aH-NLo"/>
+                            <constraint firstItem="KvD-gg-OSp" firstAttribute="trailing" secondItem="MTw-2H-TjE" secondAttribute="trailingMargin" id="IBg-rU-oBh"/>
+                            <constraint firstItem="KvD-gg-OSp" firstAttribute="leading" secondItem="MTw-2H-TjE" secondAttribute="leadingMargin" id="Rpn-Uw-7t8"/>
+                            <constraint firstItem="KvD-gg-OSp" firstAttribute="top" secondItem="kBM-Uy-TBi" secondAttribute="bottom" constant="8" symbolic="YES" id="XL4-SE-yY5"/>
+                            <constraint firstItem="tBl-y5-ADh" firstAttribute="top" secondItem="KvD-gg-OSp" secondAttribute="bottom" constant="24" id="iun-0p-ptU"/>
+                            <constraint firstItem="kBM-Uy-TBi" firstAttribute="top" secondItem="vpA-1a-hpe" secondAttribute="top" constant="20" id="nNo-s6-zj8"/>
+                            <constraint firstItem="tBl-y5-ADh" firstAttribute="centerX" secondItem="KvD-gg-OSp" secondAttribute="centerX" id="tru-Bd-2Yh"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" id="UtA-MQ-VEY">
-                        <imageReference key="image" image="rectangle.portrait.on.rectangle.portrait.angled.fill" catalog="system" symbolScale="large" renderingMode="hierarchical">
+                        <imageReference key="image" image="folder.fill" catalog="system" symbolScale="large" renderingMode="hierarchical">
                             <hierarchicalColors>
                                 <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color systemColor="secondaryLabelColor"/>
@@ -332,6 +353,10 @@
                             </hierarchicalColors>
                         </imageReference>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="projectBioLabel" destination="tBl-y5-ADh" id="z20-b5-QC7"/>
+                        <outlet property="projectLabel" destination="kBM-Uy-TBi" id="IWF-q5-tH8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gYl-D7-1qP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -341,10 +366,11 @@
     <resources>
         <image name="Me" width="192" height="192"/>
         <image name="Welcome" width="512" height="512"/>
+        <image name="autn" width="2048" height="1363"/>
+        <image name="chart.bar.doc.horizontal" catalog="system" width="115" height="128"/>
+        <image name="folder.fill" catalog="system" width="128" height="96"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
-        <image name="plus.rectangle.on.folder.fill" catalog="system" width="128" height="95"/>
         <image name="rectangle.inset.filled.and.person.filled" catalog="system" width="128" height="87"/>
-        <image name="rectangle.portrait.on.rectangle.portrait.angled.fill" catalog="system" width="120" height="128"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

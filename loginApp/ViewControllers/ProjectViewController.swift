@@ -10,14 +10,15 @@ import UIKit
 class ProjectViewController: UIViewController {
     
     @IBOutlet var projectLabel: UILabel!
-    @IBOutlet var projectBioLable: UILabel!
+    @IBOutlet var projectBioLabel: UILabel!
     
     var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         user = User.getUserData()
-        projectLabel.text = user.person.bio
+        projectLabel.text = user.person.project
+        projectBioLabel.text = user.person.projectBio
     }
 }
 
